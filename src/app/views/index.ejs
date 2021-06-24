@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>Club Burguer Bar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link  rel="stylesheet" href="/resources/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black w3-hover-white">Inicio</a>
+        <a href="#promociones" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Promociones</a>
+        <a href="#catalogo2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Catalogo</a>
+       <!-- <a href="#pedidos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pedidos</a> -->
+        <a href="#contacto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacto</a>
+
+            <!--   <a href="register" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Perfil</a> -->
+
+                <a href="login" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Iniciar Sesión</a>
+                <a href="register" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Registrarse</a>
+
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+        <a href="#promociones" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Promociones</a>
+        <a href="#catalogo2" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Catalogo</a>
+     <!--   <a href="#pedidos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Pedidos</a> -->
+        <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Contacto</a>
+        <a href="login" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Iniciar Sesión</a>
+        <a href="register" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Registrarse</a>
+    </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-black w3-center" style="padding:80px 16px">
+
+    <img  class="logo" id="logo" src="resources/img/logo.png" width="300" height="300">
+
+
+       <!-- <div class="nombrediv" id="nombrediv">
+    <p>The Club Burguer Bar</p>
+        </div> -->
+
+    <!-- <p class="w3-xlarge">Hechas con Amor</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Comienza</button> -->
+</header>
+
+<!-- Promociones -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="promociones">
+    &nbsp;
+    &nbsp;
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Promociones</h1>
+    &nbsp;
+    <p></p>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa1.jpg" alt="Sandwich" width="300" height="300">
+        <h3 >Clasica + Adición de papas</h3>
+        <p>$20,000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa2.jpg"  alt="Steak" width="300" height="300">
+        <h3>Hamburguesa clasica 2x1</h3>
+        <p>$30.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa3.jpg"  alt="Cherries" width="300" height="300">
+        <h3>Hamburguesa Doble peso 20% off</h3>
+        <p>$20.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa4.jpg"  alt="Pasta and Wine" width="300" height="300">
+        <h3>Hamburguesota 20% off</h3>
+        <p>$24.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+</div>
+
+<!-- Catalogo -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="catalogo2">
+    &nbsp;
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Catálogo</h1>
+    &nbsp;
+    <p></p>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa1.jpg" alt="Sandwich"  width="300" height="300">
+        <h3>    Clasica</h3>
+        <p>$18.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa2.jpg"  alt="Steak"  width="300" height="300">
+        <h3>Hamburguesitas</h3>
+        <p>$20.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa3.jpg"  alt="Cherries"  width="300" height="300">
+        <h3>Doble peso</h3>
+        <p>$25.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+    <div class="w3-quarter">
+        <img src="resources/img/hamburguesa4.jpg"  alt="Pasta and Wine"  width="300" height="300">
+        <h3>Hamburguesota</h3>
+        <p>$30.000</p>
+        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <p></p>
+    </div>
+</div>
+
+<!-- Pedidos -->
+<!-- <div class="w3-row-padding w3-padding-16 w3-center" id="pedidos">
+    &nbsp;
+    &nbsp;
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Pedidos</h1>
+    <h2 class="w3-red"> Intrucciones para realizar un pedido:</h2>
+    <h3> Para poder realizar un pedido primero debes registrarte.</h3>
+    <h3> Despues, visualizas el producto que desees y lo añades a la canasta.</h3>
+    <h3> Cuando termines de agregar los productos que quieras, debes verificar los items entrando en la sección canasta.</h3>
+    <h3> Si todo está en orden, continua por verificar los datos del pedido.</h3>
+    <h3> Espera la confirmación del pedido y listo!</h3>
+</div> -->
+
+<!--Contacto -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="contacto">
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Contacto</h1>
+    &nbsp;
+    <!--<h3> Puedes comunicarte con alguno de nuestros canales o dejar tu mensaje acá</h3>-->
+    <form action="" method="">
+        <input type="text" class="nombrecompleto" name="nombre" placeholder="Nombre completo" required>
+        <p></p>
+        <input type="text" class="numerocontacto" name="numerocontacto"  placeholder="Escriba un numero de contacto" required>
+        <p></p>
+        <input type="text" class="mensaje" name="mensaje"  placeholder="Escriba su mensaje" required>
+        <p></p>
+        <input type="submit" class="btn-save" value="Enviar">
+    </form>
+</div>
+<!--Frase -->
+<div class="w3-container w3-black w3-center  w3-padding-64">
+    <h1 class=" animate__animated animate__heartBeat animate__infinite infinite" class="w3-bar-item w3-button-xlarge">Vive la vida, tal como es</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <div class="w3-xlarge w3-padding-32">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+</footer>
+
+<!--Boton canasta -->
+<a href="canasta" class=" float" >
+    <i class="fa fa-shopping-basket my-float"></i>
+</a>
+
+<!--Script-->
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+</body>
+</html>
