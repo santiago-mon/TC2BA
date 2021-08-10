@@ -18,6 +18,10 @@ module.exports = app => {
        }
     })
 
+    app.get('/index', (req,res) => {
+        res.render('../views/index.ejs');
+    })
+
     app.get('/login', (req,res) => {
         res.render('../views/login.ejs');
     })
@@ -29,6 +33,11 @@ module.exports = app => {
     app.get('/canasta', (req,res) => {
         res.render('../views/canasta.ejs');
     })
+
+    app.get('/perfil', (req,res) => {
+        res.render('../views/perfil.ejs');
+    })
+
 
     app.get('/logout', (req,res) => {
         req.session.destroy(() => {

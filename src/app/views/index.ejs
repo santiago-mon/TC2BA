@@ -9,7 +9,6 @@
 <link  rel="stylesheet" href="/resources/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-
 <body>
 
 <!-- Navbar -->
@@ -20,7 +19,7 @@
         <a href="#promociones" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Promociones</a>
         <a href="#catalogo2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Catalogo</a>
        <!-- <a href="#pedidos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pedidos</a> -->
-
+        <a href="#espacio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Mapa</a>
         <a href="#contacto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacto</a>
             <% if(login) { %>
               <a href="perfil" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Perfil</a>
@@ -36,6 +35,7 @@
         <a href="#promociones" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Promociones</a>
         <a href="#catalogo2" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Catalogo</a>
      <!--   <a href="#pedidos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Pedidos</a> -->
+        <a href="#map" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Mapa</a>
         <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Contacto</a>
         <a href="login" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Iniciar Sesión</a>
         <a href="register" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Registrarse</a>
@@ -66,29 +66,37 @@
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa1.jpg" alt="Sandwich" width="300" height="300">
         <h3 >Clasica + Adición de papas</h3>
-        <p>$20,000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa2.jpg"  alt="Steak" width="300" height="300">
         <h3>Hamburguesa clasica 2x1</h3>
-        <p>$30.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa3.jpg"  alt="Cherries" width="300" height="300">
         <h3>Hamburguesa Doble peso 20% off</h3>
-        <p>$20.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa4.jpg"  alt="Pasta and Wine" width="300" height="300">
         <h3>Hamburguesota 20% off</h3>
-        <p>$24.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
 </div>
@@ -102,29 +110,37 @@
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa1.jpg" alt="Sandwich"  width="300" height="300">
         <h3>    Clasica</h3>
-        <p>$18.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa2.jpg"  alt="Steak"  width="300" height="300">
         <h3>Hamburguesitas</h3>
-        <p>$20.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa3.jpg"  alt="Cherries"  width="300" height="300">
         <h3>Doble peso</h3>
-        <p>$25.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart"><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
     <div class="w3-quarter">
         <img src="resources/img/hamburguesa4.jpg"  alt="Pasta and Wine"  width="300" height="300">
         <h3>Hamburguesota</h3>
-        <p>$30.000</p>
-        <a href="#" style="color:white;" class="agregar" > Agregar</a>
+        <div class="item-details">
+            <h4 class="item-price">9.99€</h4>
+            <button class="item-button btn btn-primary addToCart" ><i class="fa fa-plus-circle" aria-hidden="true"></i> Añadir</button>
+        </div>
         <p></p>
     </div>
 </div>
@@ -141,6 +157,21 @@
     <h3> Si todo está en orden, continua por verificar los datos del pedido.</h3>
     <h3> Espera la confirmación del pedido y listo!</h3>
 </div> -->
+
+<!-- Espacios -->
+<div class="w3-row-padding w3-padding-16 w3-center" id="espacio"></div>
+<div class="w3-row-padding w3-padding-16 w3-center" id="espacio2"></div>
+<!-- mapa -->
+<p></p>
+
+<div class="mapouter" id="map">
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Mapa</h1>
+    <div class="gmap_canvas">
+        <iframe width="904" height="535" id="gmap_canvas" src="https://maps.google.com/maps?q=CR%2073%2020E%20-%205%20Bello,%20Colombia&t=&z=19&ie=UTF8&iwloc=&output=embed" frameborder="50" scrolling="no" marginheight="0" marginwidth="50"></iframe>
+    </div>
+</div>
+        &nbsp;
+
 
 <!--Contacto -->
 <div class="w3-row-padding w3-padding-16 w3-center" id="contacto">
