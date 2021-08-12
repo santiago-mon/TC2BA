@@ -1,6 +1,7 @@
 //Rutas
 const bcryptjs = require('bcryptjs');
 const connection = require('../../config/db');
+let global = {};
 
 module.exports = app => {
    app.get('/', (req,res) => {
@@ -34,10 +35,33 @@ module.exports = app => {
         res.render('../views/canasta.ejs');
     })
 
-    app.get('/perfil', (req,res) => {
-        res.render('../views/perfil.ejs');
+    app.get('/venta', (req,res) => {
+        res.render('../views/venta.ejs');
     })
 
+    /* app.get('/perfil', (req,res) => {
+        let correo = global.correo;
+        console.log('Este es el correo: ' + correo);
+        connection.query ('SELECT * FROM users WHERE correo = ? ', [correo], (error, resultados) => {
+            if (error) {
+                console.log (error)
+            } else {
+                res.render ('../views/perfil.ejs', {
+                    //login correcto sw2
+                    alert : true,
+                    alertTitle : 'Conexión exitosa',
+                    alertMessage : 'Login Correcto',
+                    alertIcon : 'success',
+                    showConfirmButton : false,
+                    timer : 1500,
+                    ruta : '',
+                    perfil : resultados[0]
+                });
+                console.log(resultados);
+            }
+        });
+        res.render('../views/perfil.ejs');
+    })*/
 
     app.get('/logout', (req,res) => {
         req.session.destroy(() => {
@@ -74,6 +98,7 @@ module.exports = app => {
             }
         })
     })
+
 
     //Solicitud POST de login
     app.post('/auth', async (req,res) => {
