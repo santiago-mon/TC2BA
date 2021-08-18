@@ -226,11 +226,11 @@ h3{
   box-sizing:border-box;
 }
 
-.float{
+.float-carrito{
   position:fixed;
   width:60px;
   height:60px;
-  bottom:40px;
+  bottom:120px;
   right:20px;
   background-color:black;
   color:whitesmoke;
@@ -347,4 +347,29 @@ h3{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
-/*pop up*/
+
+/* chat */
+.chat{
+  position: relative;
+}
+
+.float-chat{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:40px;
+  right:20px;
+  background-color:black;
+  color:whitesmoke;
+  border-radius:50px;
+  text-align:center;
+  box-shadow: 2px 2px 3px #999;
+}
+
+.fa .fa-comments{
+  size: 200px;
+}
+
+.derechos{
+  font-size: 14px;
+}

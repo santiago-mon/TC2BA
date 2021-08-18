@@ -17,13 +17,16 @@
         <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
         <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black w3-hover-white">Inicio</a>
         <a href="#promociones" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Promociones</a>
-        <a href="#catalogo2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Catalogo</a>
+        <a href="#catalogo2" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Catálogo</a>
         <!-- <a href="#pedidos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Pedidos</a> -->
         <a href="#espacio" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Mapa</a>
-        <a href="#contacto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contacto</a>
+        <a href="#contacto" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contactenos</a>
         <% if(login) { %>
             <!--<a href="perfil" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Perfil</a> -->
             <a href="logout" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Cerrar Sesión</a>
+           <!--  <% /* if(rol === "administrador") { %>
+                <a href="administrador" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Administrador</a>
+            <% } */ %> -->
            <!-- <a href="#carrito" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Carrito</a>-->
         <% } else { %>
             <a href="login" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" style="float: right">Iniciar Sesión</a>
@@ -36,12 +39,12 @@
         <a href="#promociones" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Promociones</a>
 
 
-        <a href="#catalogo2" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Catalogo</a>
+        <a href="#catalogo2" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Catálogo</a>
         <!--   <a href="#pedidos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Pedidos</a> -->
         <a href="#map" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Mapa</a>
         <a href="#contacto" class="w3-bar-item w3-button w3-padding-large w3-hover-black">Contacto</a>
         <% if(login) { %>
-            <a href="logout" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Logout</a>
+            <a href="logout" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Cerrar Sesión</a>
           <!--  <a href="#carrito" class="w3-bar-item w3-button w3-padding-large w3-hover-black" >Carrito</a> -->
         <% } else { %>
             <a href="login" class="w3-bar-item w3-button w3-padding-large w3-hover-black" style="float: right">Iniciar Sesión</a>
@@ -170,14 +173,14 @@
 <!--Contacto -->
 <div class="w3-row-padding w3-padding-16 w3-center" id="contacto">
     &nbsp;
-    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Contacto</h1>
+    <h1 class="animateanimated animate__pulse animateinfinite infinite">Contactenos</h1>
     &nbsp;
-    <form action="" method="">
-        <input type="text" class="nombrecompleto" name="nombre" placeholder="Nombre completo" required>
+    <form action="contacto" method="POST">
+        <input for="nombre" type="text" class="nombrecompleto" name="nombre" placeholder="Nombre completo" required>
         <p></p>
-        <input type="text" class="numerocontacto" name="numerocontacto"  placeholder="Escriba un numero de contacto" required>
+        <input for="numerocontacto" type="text" class="numerocontacto" name="numerocontacto"  placeholder="Escriba un numero de contacto" required>
         <p></p>
-        <input type="text" class="mensaje" name="mensaje"  placeholder="Escriba su mensaje" required>
+        <input for="mensaje" type="text" class="mensaje" name="mensaje"  placeholder="Escriba su mensaje" required>
         <p></p>
         <input type="submit" class="btn-save" value="Enviar">
     </form>
@@ -341,11 +344,24 @@
 
 <% } %>
 
+
+<!-- Chat -->
+<% if(login) { %>
+    <h1 class="animate__animated animate__pulse animate__infinite	infinite">Chat</h1>
+<div class="chat" id="chat">
+<script id="cid0020000290222567010" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 600px;height: 400px;">{"handle":"tc2bapp","arch":"js","styles":{"a":"161616","b":100,"c":"FFFFFF","d":"FFFFFF","k":"202020","l":"202020","m":"202020","n":"FFFFFF","p":"10","q":"202020","r":100,"usricon":0,"surl":0,"cnrs":"0.25","fwtickm":1}}</script>
+</div>
+<% } %>
+
+
+
 <!--Frase -->
 <div class="w3-container w3-black w3-center  w3-padding-64">
     <h1 class=" animate__animated animate__heartBeat animate__infinite infinite" class="w3-bar-item w3-button-xlarge">Vive la vida, tal como es</h1>
 </div>
 
+<p class="derechos">*La aplicación TC2BA hace parte de un ejercicio académico en el programa Técnico en Programación de Software, en convenio Institución Universitaria Salazar y Herrera - SENA, 2021.
+    Los autores:  Santiago Rodriguez Mojica, Santiago Monrroy Henao y Santiago Hernández Chalarca* Los derechos de uso y ejecución están sujetos a Licencia Creative Commons, o derechos reservados de autor según sea el caso (consulte co.creativecommons.org)</p>
 <!-- Footer -->
 <!-- <footer class="w3-container w3-padding-64 w3-center w3-opacity">
     <div class="w3-xlarge w3-padding-32">
@@ -360,8 +376,11 @@
 
 <!--Boton canasta -->
 <% if(login) { %>
-<a href="#carrito" class=" float" >
+<a href="#carrito" class="float-carrito" >
     <i class="fa fa-shopping-basket my-float"></i>
+</a>
+<a href="#chat" class="float-chat" >
+    <i class="fa fa-comments my-float" aria-hidden="true"></i>
 </a>
 <% } %>
 

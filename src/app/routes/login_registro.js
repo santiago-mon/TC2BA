@@ -14,7 +14,7 @@ module.exports = app => {
         } else {
            res.render('../views/index.ejs', {
                login: false,
-               name: 'Por favor Inicie sesión'
+               name: 'Inicie sesión'
            });
        }
     })
@@ -33,6 +33,10 @@ module.exports = app => {
 
     app.get('/canasta', (req,res) => {
         res.render('../views/canasta.ejs');
+    })
+
+    app.get('/administrador', (req,res) => {
+        res.render('../views/administrador');
     })
 
     app.get('/venta', (req,res) => {
@@ -98,6 +102,28 @@ module.exports = app => {
             }
         })
     })
+
+
+    // Solicitud POST en Formulario de contacto
+    app.post('/contacto', (req,res) =>{
+        const {nombre,numerocontacto,mensaje} = req.body
+        console.log(req.body)
+        connection.query('INSERT INTO contacto SET ?' , {
+            nombre : nombre ,
+            numerocontacto : numerocontacto,
+            mensaje : mensaje
+        }, (error,result) => {
+            if(error){
+                console.log(error)
+            } else {
+                res.redirect('/')
+
+
+            }
+        })
+    } )
+
+
 
 
     //Solicitud POST de login

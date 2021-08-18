@@ -14,6 +14,12 @@ create table users(
                     rol varchar(20) default 'cliente'
 );
 
+create table contacto (
+                          nombre varchar (80) not null,
+                          numerocontacto varchar(80)  not null,
+                          mensaje varchar (255) not null
+);
+
 describe users;
 
 
