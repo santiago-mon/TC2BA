@@ -1,7 +1,7 @@
 //Rutas
 const bcryptjs = require('bcryptjs');
 const connection = require('../../config/db');
-let global = {};
+
 
 module.exports = app => {
    app.get('/', (req,res) => {
@@ -36,7 +36,13 @@ module.exports = app => {
     })
 
     app.get('/administrador', (req,res) => {
-        res.render('../views/administrador');
+       connection.query('SELECT * FROM contacto' , (err, results) => {  
+           if(err){
+               console.log(err)
+           } else{
+               res.send(results)
+           }
+       })
     })
 
     app.get('/venta', (req,res) => {
@@ -124,11 +130,21 @@ module.exports = app => {
     } )
 
 
-
-
+   
     //Solicitud POST de login
     app.post('/auth', async (req,res) => {
         const {correo,pass} = req.body;
+        if(correo === process.env.CORREO_ADMIN && pass === process.env.PASS_ADMIN){
+            connection.query('SELECT * FROM contacto' , (err, results) => {  
+                if(err){
+                    console.log(err)
+                } else{
+                    res.render('../views/administrador.ejs' , {
+                        con : results
+                    })
+                }
+            })
+        }
         let passwordHaash = await bcryptjs.hash(pass, 8);
 
         if(correo && pass){

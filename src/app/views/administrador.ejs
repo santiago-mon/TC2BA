@@ -13,9 +13,36 @@
 
 
 <!-- As a heading -->
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark" style="background-color: #161616;">
     <span class="navbar-brand mb-0 h1">Administrador</span>
+  <a href="logout" style="color: white;" ><span class="navbar-brand mb-0 h1" ></span>Cerrar Sesión</a>
 </nav>
+
+<h2>BUZON DE SUGERENCIAS</h2>
+<div class="row">
+  <div class="col-md-6 mt-4 text-center">
+      <table class="table table-striped">
+          <tr>
+              <th>NOMBRE</th>
+              <th>NUMERO DE CONTACTO</th>
+              <th>MENSAJE</th>
+          </tr>
+
+
+
+          <% for(let i = 0 ; i < con.length;i++) {  %>
+
+              <tr>
+                  <td><%= con[i].nombre %> </td>
+                  <td><%= con[i].numerocontacto%> </td>
+                  <td><%= con[i].mensaje%> </td>
+              </tr>
+
+              <% } %>
+
+      </table>
+  </div>
+</div>
 
 
 </body>
